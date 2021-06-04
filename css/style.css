@@ -9,10 +9,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* max-width: 1200px; */
-    /* overflow-x: hidden; */
     font-family: 'Poppins', sans-serif;
-    font-size: 10px;
+    transition: 0.3s ease;
+}
+ul{
+    list-style-type: none;
 }
 
 a {
@@ -25,8 +26,8 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
     font-size: 1.1rem;
+    z-index: 1;
 }
 #nav-content .container .wrapper h2{
     margin-left: 5%;
@@ -34,21 +35,28 @@ a {
 
 #nav-content ul {
     /* margin-left: 0 20%; */
-    margin-right: 20%;
+    margin-right: 15%;
     display: flex;
     text-align: center;
     justify-content: center;
-    list-style-type: none;
 }
 
 #nav-content ul li{
-    margin: 5% 10%;
+    margin: 5%;
+    padding: 4% 6%;
+    border-radius: 40px;
+    transition: 0.3s ease background-color;
+}
+#nav-content ul li:hover{
+    background-color: red;  
+    
 }
 
 @media only screen and (max-width: 768px) {
     #nav-content .container .wrapper{
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
+        text-align: center;
         font-size: 1.25rem;
     }
     #nav-content .container .wrapper h2{
