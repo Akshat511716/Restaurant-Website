@@ -10,7 +10,7 @@
     --secondary-color: ;
     --accent-color: #719b17;
     --dark-color: #000;
-    --body-bg: #ecebebee;
+    --body-bg: #ecebebf5;
 }
 
 /* Global Variables */
@@ -29,6 +29,7 @@ html{
 body {
     transition: 0.3s ease;
     background-color: var(--body-bg);
+    max-width: 1200px;
 }
 ul{
     list-style-type: none;
@@ -37,9 +38,6 @@ ul{
 a {
     text-decoration: none;
     color: var(--primary-color)
-}
-#nav-content{
-    z-index: 100;
 }
 
 #nav-content .nav-icon{
@@ -55,6 +53,7 @@ a {
     padding: 1rem 4.5rem;
     box-shadow: 0 0 5px var(--primary-color);
     background-color: var(--body-bg);
+    z-index: 100;
     
 }
 #nav-content .container h2 a{
@@ -119,40 +118,53 @@ a {
 }
 
 #hero-section .container{
-    margin: 12rem 5rem;
+    margin: 12rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border-spacing: 12rem; */
     flex-flow: flex wrap;
 }
 #hero-section .container .left{
-    text-align: left;
-    /* text-align: center; */
-    margin-right: 30px;
-    /* padding-right: 2rem; */
-    /* overflow: hidden; */
     /* background-color: red; */
-
+    /* padding: 12rem 0; */
+    text-align: left;
+    margin-right: 30px;
+    /* overflow: hidden; */
 }
 #hero-section .container .left h1{
     font-size: 7vw;
     color: var(--accent-color);
-    /* margin-left: -14px; */
-    /* margin-bottom: 0.2rem; */
-    /* line-height: 5rem; */
+    position: relative;
+    animation: reveal-top 1s ease-in-out forwards;
 }
 #hero-section .container .left h2{
     font-size: 3vw;
     margin-left: -2px;
+    position: relative;
+    animation: reveal-top 1s ease-in-out;
 }
 #hero-section .container .left h3{
     font-size: 2vw;
+    position: relative;
+    animation: reveal-top 1s ease-in-out ;
 }
+
 #hero-section .container .right img{
     max-width: 300px;
     height: 300px;
     object-fit: contain;
+    position: relative;
+    animation: reveal-top 1s ease-in-out;
+}
+@keyframes reveal-top{
+    0%{
+        bottom: 40px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0px;
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -183,4 +195,38 @@ a {
         /* border-radius: 250px; */
         margin: 0 auto;
     }
+}
+
+
+#aboutus-section .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    /* text-align: center; */
+    width: 80%;
+    height: 100vh;
+    margin: 2rem auto;
+}
+#aboutus-section .left{
+    flex: 4;
+    /* padding: 0 3rem; */
+}
+
+#aboutus-section .right{
+    /* margin: 0 2rem; */
+    flex: 3.5;
+}
+#aboutus-section h3{
+    color: var(--accent-color);
+}
+#aboutus-section .right img{
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+    /* object-position: 100% 10%; */
+    
 }
