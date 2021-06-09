@@ -39,6 +39,9 @@ a {
     text-decoration: none;
     color: var(--primary-color)
 }
+section{
+    margin: 10rem 0;
+}
 
 #nav-content .nav-icon{
     display: none;
@@ -190,9 +193,6 @@ a {
     #hero-section .container .right img{
         max-width: 300px;
         height: 300px;
-        /* text-align: center; */
-        /* background-color: red; */
-        /* border-radius: 250px; */
         margin: 0 auto;
     }
 }
@@ -203,30 +203,38 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    /* text-align: center; */
     width: 80%;
     height: 100vh;
     margin: 2rem auto;
 }
 #aboutus-section .left{
     flex: 4;
-    /* padding: 0 3rem; */
+    padding-left: 1.5rem;
 }
 
 #aboutus-section .right{
-    /* margin: 0 2rem; */
-    flex: 3.5;
+    flex: 3;
 }
 #aboutus-section h3{
     color: var(--accent-color);
 }
-#aboutus-section .right img{
+#aboutus-section .container .right img{
     width: 100%;
-    max-width: 400px;
-    height: 500px;
+    max-width: 325px;
     object-fit: cover;
-    overflow: hidden;
     border-radius: 20px;
-    /* object-position: 100% 10%; */
-    
+    transition: transform 0.3s ease;
+}
+#aboutus-section .container .right img:hover{
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px){
+    #aboutus-section .container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #aboutus-section .container .right{
+        margin: 3rem auto;
+    }
 }
