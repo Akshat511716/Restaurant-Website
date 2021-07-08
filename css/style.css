@@ -29,7 +29,8 @@ html {
 body {
     transition: 0.3s ease;
     background-color: var(--body-bg);
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
 }
 
 ul {
@@ -128,15 +129,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: flex wrap;
+    flex-wrap: wrap;
 }
 
 #hero-section .container .left {
-    /* background-color: red; */
-    /* padding: 12rem 0; */
     text-align: left;
     margin-right: 30px;
-    /* overflow: hidden; */
 }
 
 #hero-section .container .left h1 {
@@ -251,7 +249,7 @@ section {
 }
 
 #menu-section .container {
-    margin: 0 7rem;
+    margin: 2rem 5rem;
 }
 
 #menu-section .container h1 {
@@ -262,31 +260,31 @@ section {
 
 #menu-section .container .items {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+    grid-gap: 5rem;
 }
 
 #menu-section .container .items .item {
-    border-radius: 20px;
+    display: grid;
+    place-content: center;
+    border-radius: 2vw;
     transition: 0.3s ease;
     transition-property: transform, background-color;
     cursor: pointer;
-    object-fit: cover;
-    max-width: 350px;
-    height: 375px;
+    max-width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     overflow: hidden;
-    /* display: flex; */
 }
 
-#menu-section .container .items .content {
-    display: flex;
-    flex-direction: column;
+#menu-section .container .items .item .content {
+    margin-top: 20vw;
     padding: 1rem;
-    background-color: rgba(197, 197, 197, 0.705);
+    background-color: rgba(197, 197, 197, 0.6);
     color: var(--dark-color);
-    /* position: absolute; */
-    bottom: 0;
-    z-index: 1;
 }
 
 #menu-section .container .items .item:hover {
@@ -295,25 +293,52 @@ section {
 }
 
 #menu-section .container .items .item:nth-child(1) {
-    background-image: url("https://source.unsplash.com/350x400/?salad");
+    background-image: url("https://source.unsplash.com/daily?salad");
 }
 
 #menu-section .container .items .item:nth-child(2) {
-    background-image: url("https://source.unsplash.com/350x400/?sweet");
+    background-image: url("https://source.unsplash.com/daily?sweet");
 }
 
 #menu-section .container .items .item:nth-child(3) {
-    background-image: url("https://source.unsplash.com/350x400/?food");
+    background-image: url("https://source.unsplash.com/daily?food");
 }
 
 #menu-section .container .items .item:nth-child(4) {
-    background-image: url("https://source.unsplash.com/350x400/?candy");
+    background-image: url("https://source.unsplash.com/daily?candy");
 }
 
 #menu-section .container .items .item:nth-child(5) {
-    background-image: url("https://source.unsplash.com/350x400/?pizza");
+    background-image: url("https://source.unsplash.com/daily?pizza");
 }
 
 #menu-section .container .items .item:nth-child(6) {
-    background-image: url("https://source.unsplash.com/350x400/?burger");
+    background-image: url("https://source.unsplash.com/daily?burger");
+}
+
+@media screen and (max-width:975px) {
+    #menu-section .container .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #menu-section .container .items .item .content {
+        margin-top: 27vw;
+    }
+}
+
+@media screen and (max-width:875px) {
+    #menu-section .container {
+        margin: 0 2rem;
+    }
+    #menu-section .container .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #menu-section .container .items .item .content {
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width:875px) {
+    #menu-section .container .items .item .content {
+        margin-top: 275px;
+    }
 }
