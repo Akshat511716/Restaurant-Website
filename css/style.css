@@ -250,8 +250,6 @@ section {
     }
 }
 
-
-
 #menu-section .container {
     margin: 0 7rem;
 }
@@ -286,7 +284,7 @@ section {
     padding: 1rem;
     background-color: rgba(197, 197, 197, 0.705);
     color: var(--dark-color);
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     z-index: 1;
 }
@@ -309,15 +307,13 @@ section {
 }
 
 #menu-section .container .items .item:nth-child(4) {
-    background-image: url("https://source.unsplash.com/350x400/?food");
+    background-image: url("https://source.unsplash.com/350x400/?candy");
 }
 
 #menu-section .container .items .item:nth-child(5) {
-    background-image: url("https://source.unsplash.com/350x400/?food");
+    background-image: url("https://source.unsplash.com/350x400/?pizza");
 }
 
 #menu-section .container .items .item:nth-child(6) {
-    background-image: url("https://source.unsplash.com/350x400/?food");
+    background-image: url("https://source.unsplash.com/350x400/?burger");
 }
-
-
